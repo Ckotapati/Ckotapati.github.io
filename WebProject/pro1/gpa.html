@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>GPA Calculation</title> 
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="responsive.css"/>
+	<script type="text/javascript">
+		
+		function calculateGpa() 
+		{
+    			var gc1 = document.getElementById("gc1").value;
+			var gc2 = document.getElementById("gc2").value;
+			var cc1 = document.getElementById("cc1").value;
+			var cc2 = document.getElementById("cc2").value;
+			var gc12=[];
+			gc12.push(gc1);
+			gc12.push(cc1);
+			gc12.push(gc2);
+			gc12.push(cc2);
+			var gpts;
+			var li=[];
+			if(gc12.includes("A")) 
+			{
+				var i1 = gc12.indexOf("A");
+				var i2 = gc12.lastIndexOf("A")
+				gpts= 4;
+             			if(i1==i2)
+				{
+					
+					gc12[i1]=gpts;
+					
+				}
+				else
+				{
+					gc12[i1]=gpts;
+					gc12[i2]=gpts;
+				}
+				
+	
+             		}
+        		if(gc12.includes("B")) 
+			{
+				var i1 = gc12.indexOf("B");
+				var i2 = gc12.lastIndexOf("B")
+				gpts= 3;
+             			if(i1==i2)
+				{
+					
+					gc12[i1]=gpts;
+					
+				}
+				else
+				{
+					gc12[i1]=gpts;
+					gc12[i1]=gpts;
+				}
+             			
+             		}
+        		if(gc12.includes("C")) 
+			{
+				var i1 = gc12.indexOf("C");
+				var i2 = gc12.lastIndexOf("C")
+				gpts= 2;
+             			if(i1==i2)
+				{
+					
+					gc12[i1]=gpts;
+					
+				}
+				else
+				{
+					gc12[i1]=gpts;
+					gc12[i2]=gpts;
+				}
+             			
+             		}
+			if(gc12.includes("D")) 
+			{
+				var i1 = gc12.indexOf("D");
+				var i2 = gc12.lastIndexOf("D")
+				gpts= 1;
+             			if(i1==i2)
+				{
+					
+					gc12[i1]=gpts;
+					
+				}
+				else
+				{
+					gc12[i1]=gpts;
+					gc12[i2]=gpts;
+				}
+             			
+             		}
+			if(gc12.includes("F")) 
+			{
+				var i1 = gc12.indexOf("F");
+				var i2 = gc12.lastIndexOf("F")
+				gpts=0;
+             			if(i1==i2)
+				{
+					
+					gc12[i1]=gpts;
+					
+				}
+				else
+				{
+					gc12[i1]=gpts;
+					gc12[i2]=gpts;
+				}
+             			
+             		}
+			var sum=0;
+			var i;
+			for( i=0;i<gc12.length;i++)
+			{
+				
+				var va=gc12[i]*gc12[i+1]
+				i=i+1;
+				sum=sum+va;
+			}
+        		var GPA=(sum/(parseInt(cc1)+parseInt(cc2)));
+    			document.getElementById("result").innerHTML = "GPA is "+roundToTwo(GPA);
+			
+		}
+		function roundToTwo(num)
+		{    
+    			return +(Math.round(num + "e+2")  + "e-2");
+		}
+	</script>
+</head>
+<body class="bdy">
+	<header><div id="log"> 
+			<div>
+				<div class="clog1">
+					<img class="i" src="logo4.PNG"/>
+				</div>
+		  		<div class="clog2">
+					<h1>Recreation of CS Department Website</h1>
+				</div>
+				<div class="clog3">
+					<br>
+					<input type="text" placeholder="Search..">
+				</div>
+			</div>
+			<div class="navbar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+    					<button class="dropbtn">CS Program</button>
+    					<div class="dropdown-content">
+      						<a href="cs.html">About CS</a>
+      						<a href="faculty.html">Faculty</a>
+      						<a href="resources.html">Resources</a>
+    					</div>
+  				</div>
+				<a href="ta.html">Teaching Assistant</a>
+				<a id="current" href="gpa.html">GPA Caluculator</a>
+				<a href="contact.html">Contact US</a>
+		        </div>
+		 </div>
+	</header>
+	<main>
+	   <div class="row"><br><br>
+		<div id="h"><h1>GPA Calculation</h1></div>
+		<div id="f"><form action="" id="it1">
+		 <table id="tble">
+			<tr>
+				<td>Enter the grade of course1:</td>
+				<td><input type="text" id="gc1"></td>
+			</tr>
+			<tr>
+				<td>Enter the credits of course1:</td>
+				<td><input type="text" id="cc1"></td>
+			</tr>
+			<tr>
+				<td>Enter the grade of course2:</td>
+				<td><input type="text" id="gc2"></td>
+			</tr>
+			<tr>
+				<td>Enter the credits of course2:</td>
+				<td><input type="text" id="cc2"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" value="Calculate GPA" onclick="calculateGpa()"></td>
+			</tr>
+			<tr>
+				<td><div id="result"></div></td>
+			</tr>
+		 </table>
+		</form></div>
+	  </div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="fo1">Name: Chaitanya Kotapati</div>
+			<div id="fo2">Copyright@2020 Chaitanya Kotapati</div>
+			<div id="fo3">Contact: ckotapat@amu.edu</div>
+		</div> 
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,143 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>CS Program</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+	<header>
+		  <div id="log"> 
+			<div>
+				<div class="clog1">
+					<img class="i" src="logo4.PNG"/>
+				</div>
+		  		<div class="clog2">
+					<h1>Recreation of CS Deptartment Website</h1>
+				</div>
+				<div class="clog3"><br>
+					<input type="text" placeholder="search..">
+				</div>
+			</div>
+			<div class="navbar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+    					<button id="current" class="dropbtn">CS Program</button>
+    					<div class="dropdown-content">
+      						<a href="cs.html">About CS</a>
+      						<a href="faculty.html">Faculty</a>
+      						<a href="resources.html">Resources</a>
+    					</div>
+  				</div>
+					<a href="ta.html">Teaching Assistant</a>
+					<a href="gpa.html">GPA Caluculator</a>
+					<a href="contact.html">Contact US</a>
+		        </div>
+		 </div>
+	</header>
+	<main>
+		<div class="row">
+			<div>
+				<img  src="./CSD.jpeg" class="img1"/>
+				<h1 class="mhed">Department of Computer Science</h1>
+			</div>
+			<div class="col">
+			<h1>Program Description</h1>
+			Do you want to know how to design and program the computers powering some of today’s greatest innovations? Ever wondered how your phone knows where the nearest 			        Starbucks is, how Google’s self-driving car is even possible, or how your music and photos live in the cloud? Maybe you want to know how computers 					        protect businesses — and people — and other cybersecurity issues. AUM’s Computer Science Program, with a curriculum based on the latest ACM/IEEE 			                        recommendations and an emphasis on high-performance computing, will prepare you for a career in computer programming, networking, database management, multimedia 			        design or technology architecture.
+			<h2>Points of Pride</h2>
+			<ul>
+				<li>
+					You’ll have access to the most powerful computational resources and expertise in the country through our partnership with the NSF-supported Extreme 						Science and Engineering Discovery Environment.
+				</li>
+				<li>
+					Computer Science faculty are engaged in the private sector, supporting research and partnerships with national and international user groups and 						initiatives.
+				</li>
+			</ul>
+			<table cellspacing="0" border="1" class="center">
+				<tr>
+					<td colspan="3">U. S. Bureau of Labor Statistics sample data</td>
+				</tr>
+				<tr>
+		    			<td>Job</td>
+		    			<td>Median Pay</td>
+		    			<td>Job Growth through 2024</td>
+				</tr>
+				<tr>
+					<td>Computer and Information Research Scientist</td>
+					<td>$108,360 per year</td>
+					<td>11% (2700 more jobs)</td>
+				</tr>
+				<tr>
+					<td>Computer Network Architects</td>
+					<td>$98,430 per year</td>
+					<td>9% (12,700 more jobs)</td>
+				</tr>
+				<tr>
+					<td>Computer Analyst</td>
+					<td>$82,710 per year</td>
+					<td>21% (118,600 more jobs)</td>
+				</tr>
+				<caption>Table 1: Caption</caption>
+       			</table>
+       			<h2>Put Your Degree to Work</h2>
+       			Note: While salaries vary depending on several factors including your level of experience, education and training, and geography and industry, here is a 					sampling of the future job growth and salaries in this area.<br><br>
+      	        	&emsp;Employment of computer and information technology occupations is projected to grow 12 percent from 2014 to 2024, faster than the average for all other 					occupations.The most recent median annual wage for computer and information technology occupations $79,390 — higher than the median annual wage for all other 				        occupations.
+       			</p>
+			</div>
+			<div class="col2">
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+  						<img  class="img1" src="ACM.jpg">
+					</div>
+					<div class="mySlides fade">
+  						<img src="ACM2.jpg" class="img1">
+  					</div>
+					<div class="mySlides fade">
+  						<img src="3.jpg" class="img1">
+  					</div>
+				</div>
+				<br>
+				<div class="dopos">
+  					<span class="dot"></span> 
+  					<span class="dot"></span> 
+  					<span class="dot"></span> 
+				</div>
+				
+			</div>
+			
+			<script>
+				var slideIndex = 0;
+				showSlides();
+				function showSlides() {
+  				var i;
+  				var slides = document.getElementsByClassName("mySlides");
+  				var dots = document.getElementsByClassName("dot");
+  				for (i = 0; i < slides.length; i++) {
+    				slides[i].style.display = "none";  
+  				}
+  				slideIndex++;
+  				if (slideIndex > slides.length) {slideIndex = 1}    
+  				for (i = 0; i < dots.length; i++) {
+    				dots[i].className = dots[i].className.replace(" active", "");
+  				}
+  				slides[slideIndex-1].style.display = "block";  
+  				dots[slideIndex-1].className += " active";
+  				setTimeout(showSlides, 2000); // Change image every 2 seconds
+				}
+		       </script>
+		</div>
+
+	</main>
+	
+	<footer>
+		<div id="footer">
+			<div id="fo1">Name: Chaitanya Kotapati</div>
+			<div id="fo2">Copyright@2020 Chaitanya Kotapati</div>
+			<div id="fo3">Contact: ckotapat@amu.edu</div>
+		</div> 
+		
+	</footer>
+
+</body>
+</html>

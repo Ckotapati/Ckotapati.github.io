@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Teaching Assistant</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
+	<script src='./jquery-3.5.1.min.js'></script>
+	<script src='./jquery.validate.min.js'></script>
+	<script>
+		$(document).ready(function() {
+  		$("#basic-form").validate({
+		rules:{
+		fname:{
+		  required:true
+		},
+		id:{
+		  required:true
+		},
+		
+		gpa:{
+		  required:true
+		},
+		date:{
+		  required:true
+		},
+		comments:{
+		  required:true
+		},},
+		messages:{
+		  fname:{
+			required:"<br>This field is required"
+		},
+		  id:{
+			required:"<br>This field is required"
+		},
+		  
+		  gpa:{
+			required:"<br>This field is required"
+		},
+		  date:{
+			required:"<br>This field is required"
+		},
+		  comments:{
+			required:"<br>This field is required"
+		},
+		}
+		});
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<div id="log"> 
+			<div>
+				<div class="clog1">
+					<img class="i" src="logo4.PNG"/>
+				</div>
+		  		<div class="clog2">
+					<h1>Recreation of CS Department Website</h1>
+				</div>
+				<div class="clog3"><br>
+					<input type="text" placeholder="search..">
+				</div>
+			</div>
+			<div class="navbar">
+				<a href="home.html">Home</a>
+				<div class="dropdown">
+    					<button class="dropbtn">CS Program</button>
+    					<div class="dropdown-content">
+      						<a href="cs.html">About CS</a>
+      						<a href="faculty.html">Faculty</a>
+      						<a href="resources.html">Resources</a>
+    					</div>
+  				</div>
+				<a id="current" href="ta.html">Teaching Assistant</a>
+				<a href="gpa.html">GPA Caluculator</a>
+				<a href="contact.html">Contact US</a>
+		        </div>
+		 </div>
+	</header>
+	<main>
+		<div class="row"><br><br>
+			<div id="h"><h2>Teaching Assistant Application</h2></div>
+			<div id="f"><form id="basic-form" onsubmit="return validateForm()" class="form1">
+  				<table id="tble">
+  					<tr>
+						<td>Name:</td>
+						<td><input type="text" id="name" name="fname"></td>
+					</tr>
+  					<tr>
+						<td>ID:</td>
+						<td><input type="text" name="id"></td>
+					</tr>
+  					<tr>
+						<td>Gender:</td>
+						<td><input type="radio" id="male" name="gender" value="male">Male
+						<input type="radio" id="female" name="gender" value="female">Female</td>
+					</tr>
+  					<tr>
+						<td>GPA:</td>
+						<td><input type="text" name="gpa"></td>
+					</tr>
+					<tr>
+						<td>Submission Date:</td>
+						<td><input type="date" name="date"></td>
+					</tr>
+  					<tr>
+						<td>Comments:</td>
+						<td><textarea id="comments" name="comments" rows="4" name="t4" cols="30"></textarea></td>
+					</tr>
+  					<tr>
+						<td></td>
+						<td><input type="submit" value="Submit"></td>
+					</tr>
+  				</table>
+			</form></div>
+		</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="fo1">Name: Chaitanya Kotapati</div>
+			<div id="fo2">Copyright@2020 Chaitanya Kotapati</div>
+			<div id="fo3">Contact: ckotapat@amu.edu</div>
+		</div> 
+	</footer>
+</body>
+</html>

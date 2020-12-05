@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Home Page</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    		<link rel="stylesheet" href="css/demo.css"/>
+    		<link rel="stylesheet" href="css/theme1.css"/>
+		<link rel="stylesheet" href="Style.css">
+		<link rel="stylesheet" href="Responsive.css">
+		
+	</head>
+	<body>
+	    <header>
+		 <div id="log"> 
+			<div>
+				<div class="clog1">
+					<img class="i" src="logo4.PNG"/>
+				</div>
+		  		<div class="clog2">
+					<h1>Recreation of CS Department Website</h1>
+				</div>
+				<div class="clog3"><br>
+					<input type="text" placeholder="search..">
+				</div>
+			</div>
+			<div class="navbar">
+				<a id="current" href="home.html">Home</a>
+				<div class="dropdown">
+    					<button class="dropbtn">CS Program</button>
+    					<div class="dropdown-content">
+      						<a href="cs.html">About CS</a>
+      						<a href="faculty.html">Faculty</a>
+      						<a href="resources.html">Resources</a>
+    					</div>
+  				</div>
+				<a href="ta.html">Teaching Assistant</a>
+				<a href="gpa.html">GPA Caluculator</a>
+				<a href="contact.html">Contact US</a>
+		        </div>
+		</div>
+	   </header>
+	   <main>
+		<div class="row">
+		<div class="container">
+		  	<img src="5.jpg" alt="colg" class="img1">
+		  	<div class="centered"><h2 class="font">Auburn University at Montgomery</h2>
+			<h2>Degrees that Matter l Excellence at Work<br>
+			A University with Your Future in Mind.</h2>	
+		</div>
+		<div class="div1">
+		<div class="column">
+			<h1>Choosing a <b class="par">college</b> doesn’t<br>
+			have to be hard</h1>
+			Auburn University at Montgomery should be your choice.  Nationally acclaimed, low tuition costs, and committed to student success, AUM is now 							providing <b>NEW FRESHMEN FOR SPRING 2021 RECEIVE A FREE LAPTOP!</b><b class="par">INQUIRE NOW!</b></p>
+			<h3>Why? Because every day we get to help people like you unlock your potential and achieve your goals. But you have a bunch of colleges to choose 						from, so why us?</h3>
+			<ul>
+				<li>An affordable, world-class education in Alabama’s capital city</li>
+				<li>A vibrant campus life with Greek and other organizations, intramural sports and NCAA athletics</li>
+				<li>90 undergraduate and graduate degree programs</li>
+				<li>Small class sizes that link you with professors quickly both on-campus and online</li>
+				<li>A cool, green campus with 500 wooded acres</li>
+				<li>No Application Fees.</li>
+				<li>Additional Pell Grant funding may be available this summer for those who qualify.</li>
+				<li>ACT/SAT Waivers for Summer and Fall 2020.</li>
+				<li>Ask about GMAT/GRE/MAT Waivers.</li>
+				<li>ACT/SAT Superscoring for those with scores.  Check it out here.</li>
+				<li>Summer Incentive Scholarships offering $100 per credit hour taken for all first time AUM students.</li>
+				<li>Financial Aid to those who qualify.</li></ul>
+		</div>
+		<div class="column1">       
+    			<div class="image-container"> 
+			<div class="slide"> 
+            			<div class="slideNumber">1</div> 
+            			<img class="img1" src= "6.jpg"> 
+        		</div>
+        		<div class="slide"> 
+            			<div class="slideNumber">2</div> 
+            			<img class="img1" src= "7.jpg"> 
+        		</div> 
+        		<div class="slide"> 
+            			<div class="slideNumber">3</div> 
+           			<img class="img1" src= "3.jpg" > 
+        		</div> 
+   			<a class="previous" onclick="moveSlides(-1)"> 
+          		  	<i class="fa fa-chevron-circle-left"></i> 
+        		</a> 
+        		<a class="next" onclick="moveSlides(1)"> 
+            			<i class="fa fa-chevron-circle-right"></i> 
+        		</a> 
+    	     </div> 
+    	     <br> 
+   	     <div class="fdot"> 
+        		<span class="footerdot" onclick="activeSlide(1)"></span> 
+        		<span class="footerdot" onclick="activeSlide(2)"></span> 
+        		<span class="footerdot" onclick="activeSlide(3)"></span> 
+    	     </div> 
+      	     <script> 
+        		var slideIndex = 1; 
+        		displaySlide(slideIndex); 
+   			function moveSlides(n) { 
+            			displaySlide(slideIndex += n); 
+        		} 
+   			function activeSlide(n) { 
+            			displaySlide(slideIndex = n); 
+			} 
+        		function displaySlide(n) { 
+            			var i; 
+            			var totalslides = document.getElementsByClassName("slide"); 
+           			var totaldots =  document.getElementsByClassName("footerdot"); 
+              			if (n > totalslides.length) { 
+                			slideIndex = 1; 
+            			} 
+            			if (n < 1) { 
+                			slideIndex = totalslides.length; 
+            			} 
+            			for (i = 0; i < totalslides.length; i++) { 
+                			totalslides[i].style.display = "none"; 
+            			} 
+            			for (i = 0; i < totaldots.length; i++) { 
+                			totaldots[i].className = totaldots[i].className.replace(" active", ""); 
+            			} 
+            			totalslides[slideIndex - 1].style.display = "block"; 
+            			totaldots[slideIndex - 1].className += " active"; 
+        	      } 
+    	  </script> 
+	  </div>
+	  </div>
+	  <br><br><br><br><br>
+	  <div id="grad">
+			<h1>      </h1>
+			<br><br>
+			<h1 class="eve">Events</h1>
+			<hr class="hor">
+
+			<div class="div2">
+			<div class="column2" >
+			<h2 class="colo">Following are the events scheduled for this month</h2>
+			
+			<p class="par">Virtual Fitness Class: Zumba</p>
+			<p>September 24, 2020 @ 3:00 pm - December 15, 2020 @ 3:45 pm</p>
+			
+			<p class="par">Virtual Fitness Class: Zumba</p>
+			<p>October 1, 2020 @ 3:00 pm - December 22, 2020 @ 3:45 pm</p>
+			
+			<p class="par">Virtual Fitness Class: Zumba</p>
+			<p>October 8, 2020 @ 3:00 pm - December 29, 2020 @ 3:45 pm</p>
+			
+			</div>	&nbsp;&nbsp;&nbsp;		
+			<div class="column2">
+				<br>&nbsp;&nbsp;&nbsp;
+				<div id="caleandar">
+
+   				</div>
+				<script type="text/javascript" src="js/caleandar.js"></script>
+				<script type="text/javascript" src="js/demo.js"></script>
+ 				<br><br><br>
+			</div>
+			</div>
+			</div>
+	</div>
+	</main>
+	<footer>
+		<div id="footer">
+			<div id="fo1">Name: Chaitanya Kotapati</div>
+			<div id="fo2">Copyright@2020 Chaitanya Kotapati</div>
+			<div id="fo3">Contact: ckotapat@amu.edu</div>
+		</div>  
+	</footer>
+</body>
+</html>
